@@ -1,6 +1,6 @@
 # Rodrigo Pereira
 ## Sobre mim
-Sou Engenheiro Eletricista com formação técnica em Automação Industrial e MBA em Gestão de Projetos. Minha trajetória é marcada por uma busca constante por inovação e eficiência.
+Sou engenheiro eletricista com formação técnica em Automação Industrial e MBA em Gestão de Projetos. Minha trajetória é marcada por uma busca constante por inovação e eficiência.
 Atualmente, estou mergulhando no mundo da ciência de dados buscando entender melhor como usar os dados para otimizar processos.
 ## Conecte-se comigo
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rodrigo-pereira-a9817a226/)
