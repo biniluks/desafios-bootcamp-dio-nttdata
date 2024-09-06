@@ -48,7 +48,7 @@ while True:
             print(f'\nSaldo: R$ {saldo:.2f}')
             print('=======================================')
     elif opcao == 0:
-        print('Obrigado por ser nosso cliente :)')    
+        print('Atendimento finalizado, obrigado por ser nosso cliente :)')    
         break
     else:
         print('Opção inválida, selecione outra opção.')
