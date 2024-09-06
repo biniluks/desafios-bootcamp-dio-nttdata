@@ -36,7 +36,7 @@ while True:
             saldo -= saque
             extrato += f'Saque: R$ {saque:.2f}\n'
         else:
-            print('Não foi possível realizar a operação, por favor, entre em contato com o seu gerente.\n')
+            print('Não foi possível realizar a operação, por favor entre em contato com o seu gerente.\n')
     elif opcao == 3:
         print('\n=============== EXTRATO ===============')
         if extrato == '':
