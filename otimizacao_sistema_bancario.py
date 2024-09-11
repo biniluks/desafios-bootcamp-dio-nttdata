@@ -1,1 +1,0 @@
-### Otimização do sistema bancário ###
