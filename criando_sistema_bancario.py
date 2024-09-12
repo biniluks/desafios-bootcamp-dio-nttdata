@@ -1,4 +1,4 @@
-saldo = 0
+"""saldo = 0
 extrato = ''
 limite_valor_saque = 500
 quantidade_saques = 0
@@ -51,4 +51,23 @@ while True:
         print('Atendimento finalizado, obrigado por ser nosso cliente :)')    
         break
     else:
-        print('Opção inválida, selecione outra opção.')
+        print('Opção inválida, selecione outra opção.')"""
+
+def deposito(saldo,valor,extrato,/):
+    if valor <=0:
+        print('Não é possível realizar o depósito')
+    else:
+        print('Depósito realizado com sucesso')
+        saldo += valor
+        extrato += f'Depósito: R$ {valor:.2f}\n'
+    return saldo, extrato
+saldo = 0
+extrato = ''
+
+valor = float(input('Digite o valor do depósito: '))
+saldo = deposito(saldo,valor,extrato)
+
+print(saldo)
+print(extrato)
+
+print(extrato)
