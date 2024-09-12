@@ -6,7 +6,8 @@ Selecione a opção desejada:
 [1] - Depósito
 [2] - Saque
 [3] - Extrato
-[4] - Abrir conta
+[4] - Cadastrar cliente
+[5] - Abrir conta
 
 [0] - Sair 
 '''
@@ -41,12 +42,22 @@ def saque(valor,limite_valor_saque,limite_qtd_saques,saldo,extrato,quantidade_sa
     else:
         print('Não foi possível realizar o saque. Entre em contato com o seu gerente')
     return saldo, extrato, quantidade_saques
+def cadastro_clientes(cpf,clientes):
+    filtro = [usuario for usuario in clientes if usuario['cpf']==cpf]
+    if filtro:
+        print('Usuário já cadastrado')
+    else:
+        nome = input('Digite seu nome completo: ')
+        clientes.append(nome)
+
+
 saldo = 0
 extrato = ''
 limite_valor_saque = 500
 quantidade_saques = 0
 limite_qtd_saques = 3
-contas=[]
+clientes = []
+contas = []
 
 while True:
     opcao = int(menu())
@@ -55,10 +66,13 @@ while True:
         saldo, extrato = deposito(saldo,valor,extrato)
     elif opcao == 2:
         valor = float(input('Digite o valor para saque: '))
-        saldo, extrato, quantidade_saques = saque(valor,limite_valor_saque,limite_qtd_saques,saldo,extrato,quantidade_saques)
-        
+        saldo, extrato, quantidade_saques = saque(valor,limite_valor_saque,limite_qtd_saques,saldo,extrato,quantidade_saques)        
     elif opcao == 3:
-        exibir_extrato(extrato,saldo)    
+        exibir_extrato(extrato,saldo) 
+    elif opcao == 4:
+        cpf = int(input('Digite seu CPF, apenas números: '))
+        cadastro_clientes(cpf,clientes)
     else:
         break
+    print(clientes)
 
