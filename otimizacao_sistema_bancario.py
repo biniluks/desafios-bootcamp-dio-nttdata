@@ -48,7 +48,7 @@ def cadastro_clientes(cpf,clientes):
         print('Usuário já cadastrado')
     else:
         nome = input('Digite seu nome completo: ')
-        clientes.append(nome)
+        clientes.append({'nome':nome,'cpf':cpf})
 
 
 saldo = 0
