@@ -48,8 +48,16 @@ def cadastro_clientes(cpf,clientes):
         print('Usuário já cadastrado')
     else:
         nome = input('Digite seu nome completo: ')
-        clientes.append({'nome':nome,'cpf':cpf})
-
+        data_nascimento = input('Digite sua data de nascimento(XX-XX-XXXX): ')
+        endereco = input('Digite seu endereço(Rua, nº - Bairro - Cidade/UF): ')
+        clientes.append({'nome':nome,'data':data_nascimento,'cpf':cpf,'endereco':endereco})
+def criar_conta(cpf,contas,clientes,agencia):
+    filtro = [usuario for usuario in clientes if usuario['cpf']==cpf]
+    if filtro:
+        n_conta = len(contas) + 1
+        contas.append({cpf:{'agencia':agencia,'n_conta':n_conta,}})
+    else:
+        print('O CPF informado não pertence a nenhum cliente cadastrado')
 
 saldo = 0
 extrato = ''
@@ -58,6 +66,7 @@ quantidade_saques = 0
 limite_qtd_saques = 3
 clientes = []
 contas = []
+agencia = '0001'
 
 while True:
     opcao = int(menu())
@@ -72,7 +81,9 @@ while True:
     elif opcao == 4:
         cpf = int(input('Digite seu CPF, apenas números: '))
         cadastro_clientes(cpf,clientes)
+    elif opcao == 5:
+        cpf = int(input('Digite seu CPF, apenas números: '))
+        criar_conta(cpf,contas,clientes,agencia)
     else:
+        print('Obrigado por ser nosso cliente :)')
         break
-    print(clientes)
-
